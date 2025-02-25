@@ -1,8 +1,5 @@
-# Typescript-ReduxSaga
+# Typescript-ReduxSaga Project
 
-# React TypeScript Redux Saga Project
-
-![Project Logo](https://your-logo-url.com/logo.png) <!-- Replace with your project logo -->
 
 ## Description
 
@@ -31,14 +28,14 @@ Make sure you have the following installed:
 
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
-Navigate to the project directory:
+
+2. Navigate to the project directory:
 
 ```bash
 cd your-repo-name
 ```
 
-
-Install the dependencies:
+3. Install the dependencies:
 
 ```bash
 npm install
@@ -48,7 +45,7 @@ npm install
 yarn install
 ```
 
-Running the Application
+4. Running the Application
 To start the development server, run:
 
 ```bash
@@ -62,7 +59,7 @@ yarn start
 
 Open your browser and navigate to http://localhost:3000 to see your application in action.
 
-Building for Production
+5. Building for Production
 To build the application for production, run:
 
 ```bash
@@ -86,4 +83,4 @@ Redux Saga
 Contact
 For any inquiries, please contact:
 
-GitHub - MagicHarry
+<strong>GitHub<strong> - MagicHarry
