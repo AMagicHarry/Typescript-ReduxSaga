@@ -19,7 +19,7 @@ This project is a React application built with TypeScript and utilizes Redux Sag
 
 Make sure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (v14 or later)
+- [Node.js](https://nodejs.org/) (v18 or later)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ### Installation
