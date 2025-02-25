@@ -1,0 +1,11 @@
+export enum GaugeActionTypes {
+  API_RESPONSE_SUCCESS = "@@gauges/API_RESPONSE_SUCCESS",
+  API_RESPONSE_ERROR = "@@gauges/API_RESPONSE_ERROR",
+
+  GET_GAUGES = "@@gauges/GET_GAUGES",
+  APPROVE_GAUGES = "@@gauges/APPROVE_GAUGES",
+  RESET = "@@gauges/RESET",
+  UPDATE_FILTER = "@@gauges/UPDATE_FILTER",
+  UPDATE_YEAR = "@@gauges/UPDATE_YEAR",
+  UPDATE_QUARTER = "@@gauges/UPDATE_QUARTER",
+}
