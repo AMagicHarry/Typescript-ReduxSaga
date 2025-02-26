@@ -23,7 +23,7 @@ const EmissionsTrendChart = ({
         const value = gauge.values.find(
           (item) => item.year === year && item.quarter === quarter.value
         );
-        return sum + (value?.value || 0) * gauge.scope;
+        return sum + (value?.value || 0) * gauge.scope1;
       }, 0),
       quarter: quarter.label,
     };

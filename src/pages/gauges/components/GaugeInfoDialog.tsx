@@ -22,7 +22,7 @@ const GaugeInfoDialog = ({ open, gauge, toggleModal }: GaugeInfoDialog) => {
       <div className="duration-500 ease-out transition-all sm:w-full m-3 sm:mx-auto flex flex-col bg-white border shadow-sm rounded-md dark:bg-slate-800 dark:border-gray-700">
         <div className="flex justify-between items-center py-2.5 px-4 border-b dark:border-gray-700">
           <h3 className="font-medium text-gray-800 dark:text-white text-lg mr-8">
-            General Information
+            Gauge Information
           </h3>
           <button onClick={toggleModal} className="inline-flex justify-center items-center dark:text-gray-200">
             <i className="mgc_close_line text-xl"></i>
@@ -30,31 +30,31 @@ const GaugeInfoDialog = ({ open, gauge, toggleModal }: GaugeInfoDialog) => {
         </div>
         <div className="p-4">
           <div className="mb-2">
-            <p><b>Unit + elaboration</b>: Medium-haul flights average (km)</p>
+            <p><b>Unit + elaboration</b>: {gauge?.description}</p>
           </div>
 
           <div className="mb-2">
-            <p><b>Scope 1</b>: -</p>
+            <p><b>Scope 1</b>: {gauge?.scope1}</p>
           </div>
 
           <div className="mb-2">
-            <p><b>Scope 2 (Location based)</b>: -</p>
+            <p><b>Scope 2 (Location based)</b>: {gauge?.scope2_location}</p>
           </div>
 
           <div className="mb-2">
-            <p><b>Scope 2 (Market based)</b>: -</p>
+            <p><b>Scope 2 (Market based)</b>: {gauge?.scope2_market}</p>
           </div>
 
           <div className="mb-2">
-            <p><b>Scope 3</b>:  172 g / km</p>
+            <p><b>Scope 3</b>: {gauge?.scope3} g / km</p>
           </div>
 
           <div className="mb-2">
-            <p><b>Energy</b>: 2.8 MJ / km</p>
+            <p><b>Energy</b>: {gauge?.energy} MJ / km</p>
           </div>
 
           <div className="mb-2">
-            <p><b>Money</b>: 0.35 EUR / km</p>
+            <p><b>Money</b>: {gauge?.money} EUR / km</p>
           </div>
         </div>
       </div>
