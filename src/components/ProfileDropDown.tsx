@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ProfileMenuItem } from '../layouts/Topbar';
 import React from 'react';
 import { PopoverLayout } from './HeadlessUI';
@@ -13,6 +13,7 @@ interface ProfileDropDownProps {
 
 const ProfileDropDown = ({ menuItems, profilePic }: ProfileDropDownProps) => {
   const dispatch = useDispatch<AppDispatch>();
+  const navigate = useNavigate();
 
   const PopoverToggler = () => {
     return (
@@ -23,6 +24,10 @@ const ProfileDropDown = ({ menuItems, profilePic }: ProfileDropDownProps) => {
   const handleLogout = () => {
     dispatch(resetAuth());
     dispatch(logoutUser());
+  }
+
+  const handleGoToProfile = () => {
+    navigate('/profile')
   }
 
   return (
@@ -43,6 +48,10 @@ const ProfileDropDown = ({ menuItems, profilePic }: ProfileDropDownProps) => {
             <hr className="my-2 -mx-2 border-gray-200 dark:border-gray-700"/>
           ) : (<></>)
         }
+        <button className="w-full flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" onClick={handleGoToProfile}>
+          <i className='mgc_user_2_line me-2' />
+          <span>Profile</span>
+        </button>
         <button className="w-full flex items-center py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300" onClick={handleLogout}>
           <i className='mgc_exit_line me-2' />
           <span>Logout</span>

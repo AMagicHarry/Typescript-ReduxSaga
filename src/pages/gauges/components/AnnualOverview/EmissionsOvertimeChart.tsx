@@ -24,7 +24,7 @@ const EmissionsOvertimeChart = ({ gauges, year }: { gauges: Gauge[], year: numbe
           ...res,
           [gauge.id]: {
             name: gauge.name,
-            value: (value?.value || 0) * gauge.scope
+            value: (value?.value || 0) * gauge.scope1
           }
         };
       }, {}),

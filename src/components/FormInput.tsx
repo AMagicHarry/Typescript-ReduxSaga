@@ -25,7 +25,7 @@ const PasswordInput = ({
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   return (
-    <>
+    <div className="w-full">
       <div className="flex items-center">
         <input
           type={showPassword ? 'text' : 'password'}
@@ -56,7 +56,7 @@ const PasswordInput = ({
       {(errors && errors[name]) && (
         <p className="text-xs text-red-600 mt-2"> {errors[name]['message']}</p>
       )}
-    </>
+    </div>
   );
 };
 
@@ -111,7 +111,7 @@ const FormInput = ({
               <div className={`${containerClass ?? ''} relative`}>
                 {label && (
                   <>
-                    <label className={labelClassName ?? ''} htmlFor={name}>Password</label>
+                    <label className={labelClassName ?? ''} htmlFor={name}>{label}</label>
                     {children}
                   </>
                 )}
@@ -217,27 +217,31 @@ const FormInput = ({
                                 {label}
                               </label>
                             )}
-                            <input
-                              type={type}
-                              placeholder={placeholder}
-                              name={name}
-                              id={name}
-                              ref={(r: HTMLInputElement) => {
-                                if (refCallback) refCallback(r)
-                              }}
-                              className={`${className} ${(errors && errors[name]) ? 'border-red-500 focus:border-red-500 text-red-700  pe-10' : ''}`}
-                              {...(register ? register(name) : {})}
-                              {...otherProps}
-                              autoComplete={name}
-                            />
-                            {(errors && errors[name] && (
-                              <>
-                                <div className="absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3">
-                                  <i className="mgc_warning_fill text-xl text-red-500" />
-                                </div>
+                            <div className="w-full">
+                              <div className="flex items-center">
+                                <input
+                                  type={type}
+                                  placeholder={placeholder}
+                                  name={name}
+                                  id={name}
+                                  ref={(r: HTMLInputElement) => {
+                                    if (refCallback) refCallback(r)
+                                  }}
+                                  className={`${className} ${(errors && errors[name]) ? 'border-red-500 focus:border-red-500 text-red-700  pe-10' : ''}`}
+                                  {...(register ? register(name) : {})}
+                                  {...otherProps}
+                                  autoComplete={name}
+                                />
+                                {(errors && errors[name] && (
+                                  <div className="absolute end-1 flex items-center pointer-events-none pe-3">
+                                    <i className="mgc_warning_fill text-xl text-red-500"/>
+                                  </div>
+                                ))}
+                              </div>
+                              {(errors && errors[name] && (
                                 <p className="text-xs text-red-600 mt-2"> {errors[name]['message']}</p>
-                              </>
-                            ))}
+                              ))}
+                            </div>
                             {children ? children : null}
                           </div>
                         </>

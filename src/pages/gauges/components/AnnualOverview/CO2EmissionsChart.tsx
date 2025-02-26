@@ -22,7 +22,7 @@ const CO2EmissionsChart = ({
     value:
       (gauge.values.find(
         (item) => item.year === year && item.quarter === quarter
-      )?.value || 0) * gauge.scope,
+      )?.value || 0) * gauge.scope1,
   }));
 
   return (

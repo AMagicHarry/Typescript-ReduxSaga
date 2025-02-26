@@ -14,6 +14,7 @@ const Dashboard = React.lazy(() => import("../pages/dashboard/"));
 const Gauges = React.lazy(() => import("../pages/gauges/"));
 const GaugesBulkEdit = React.lazy(() => import("../pages/gauges/bulk-edit"));
 const ManualGauge = React.lazy(() => import("../pages/gauges/create"));
+const Profile = React.lazy(() => import("../pages/profile/"));
 
 export interface RoutesProps {
   path: RouteProps["path"];
@@ -64,6 +65,11 @@ const dashboardRoutes: RoutesProps = {
       path: "/gauges/bulk-edit",
       name: "GaugesBulkEdit",
       element: <GaugesBulkEdit />
+    },
+    {
+      path: "/profile",
+      name: "Profile",
+      element: <Profile />
     },
   ],
 };

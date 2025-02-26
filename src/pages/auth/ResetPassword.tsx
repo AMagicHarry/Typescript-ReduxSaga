@@ -27,7 +27,7 @@ const BottomLink = () => {
   );
 };
 
-const RecoverPassword = () => {
+const ResetPassword = () => {
   const schemaResolver = yupResolver<any>(
     yup.object().shape({
       password: yup.string().required("Please enter Password"),
@@ -112,4 +112,4 @@ const RecoverPassword = () => {
   );
 };
 
-export default RecoverPassword;
+export default ResetPassword;

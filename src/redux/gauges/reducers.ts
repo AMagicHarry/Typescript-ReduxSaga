@@ -41,8 +41,14 @@ export interface Gauge {
   entities: Entity[];
   values: GaugeValue[];
   description?: string | null;
-  scope: number;
+  energy: number;
+  money: number;
+  scope1: number;
+  scope2_location: number;
+  scope2_market: number;
+  scope3: number;
   unit: string;
+  approved_date?: Date | null;
   submitted_date?: Date | null;
   updated_date?: Date | null;
   time_interval: string;
